@@ -72,9 +72,18 @@ export default util.createRule({
             name: node.name.name,
           },
           fix(fixer) {
+            // For JSX arrow function, add trailing comma if there's only one parameter with no default
+            const hasOnlyOneParameter =
+              (node.parent as TSESTree.TSTypeParameterDeclaration).params
+                .length === 1;
+            const addTrailingComma =
+              inArrowFunction &&
+              inJsx &&
+              hasOnlyOneParameter &&
+              node.default === undefined;
             return fixer.replaceTextRange(
               [node.name.range[1], node.constraint.range[1]],
-              inArrowFunction && inJsx ? ',' : '',
+              addTrailingComma ? ',' : '',
             );
           },
           messageId: 'unnecessaryConstraint',

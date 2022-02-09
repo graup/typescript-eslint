@@ -14810,10 +14810,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@*, typescript@4.5.2, "typescript@>=3.3.1 <4.6.0", typescript@^4.1.0-dev.20201026, typescript@^4.4.3, typescript@~4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
-  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
+typescript@*, typescript@4.6.0-dev.20220209, "typescript@>=3.3.1 <4.6.0", typescript@^4.1.0-dev.20201026, typescript@^4.4.3, typescript@~4.5.2:
+  version "4.6.0-dev.20220209"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.0-dev.20220209.tgz#e50fbf9838cd1d102398c360dbc7d5e2b17be4d9"
+  integrity sha512-T55LJkTXli4n2+zjAkxTXXM2aCUErlEnJGcNInZh/GWCwlEKWHWRDZ8d7Ow1NSGUGwJHjb/cnESptrsCP5p8PA==
 
 ua-parser-js@^0.7.30:
   version "0.7.31"

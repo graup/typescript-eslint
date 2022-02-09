@@ -94,6 +94,34 @@ function data<T extends TODO>() {}
       output: noFormat`const data = <T,>() => {};`,
     },
     {
+      code: 'const data = <T extends any = string>() => {};',
+      filename: 'react.tsx',
+      errors: [
+        {
+          data: { constraint: 'any', name: 'T' },
+          messageId: 'unnecessaryConstraint',
+          endColumn: 37,
+          column: 15,
+          line: 1,
+        },
+      ],
+      output: noFormat`const data = <T = string>() => {};`,
+    },
+    {
+      code: 'const data = <T extends unknown = string, B>() => {};',
+      filename: 'react.tsx',
+      errors: [
+        {
+          data: { constraint: 'unknown', name: 'T' },
+          messageId: 'unnecessaryConstraint',
+          endColumn: 41,
+          column: 15,
+          line: 1,
+        },
+      ],
+      output: noFormat`const data = <T = string, B>() => {};`,
+    },
+    {
       code: 'function data<T extends unknown>() {}',
       errors: [
         {

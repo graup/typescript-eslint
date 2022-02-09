@@ -112,6 +112,6 @@
   },
   "resolutions": {
     "@types/node": "^16.11.4",
-    "typescript": "4.5.2"
+    "typescript": "4.6.0-dev.20220209"
   }
 }
